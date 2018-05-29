@@ -1,3 +1,4 @@
+
 const random1 = new Promise ((resolve,reject) =>{
     $.ajax("http://thecatapi.com/api/images/get?format=xml&results_per_page=1")
         
@@ -34,7 +35,7 @@ Promise.all([random1, random2, random3])
 .then((data)=> {
     const content = $(".images");
     data.forEach(element =>{
-        const img = $(`<img src=${element}>`);
+        const img = $(`<img class="imgs" src=${element} >`);
             content.append(img);
 
     })
