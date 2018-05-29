@@ -102,8 +102,7 @@ export const isValidProgram = (dateString) => {
   if (date.getTime() < Date.now()) {
     return false;
   }
-  hasProgramWithSameDate = festival.listOfPrograms.some(function (program) {
-    return date.getTime() === program.date.getTime();
+  hasProgramWithSameDate = festival.listOfPrograms.some((program) => {date.getTime() === program.date.getTime();
   });
 
   if (hasProgramWithSameDate) {
