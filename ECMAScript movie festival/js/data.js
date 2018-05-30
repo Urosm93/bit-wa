@@ -1,5 +1,4 @@
 
-
 class Festival {
   constructor() {
     this.listOfAllMovies = [];
@@ -39,7 +38,7 @@ class Movie {
 export const createMovie = (title, length, genre) => new Movie(title, length, genre);
 
 
-export const addMovie = movie => festival.listOfAllMovies.push(movie);
+export const addMovie = movie => festival.listOfAllMovies.push(movie) - 1 ;
 
 
 export const isValidateMovie = (title, length, genre) => {
@@ -102,7 +101,7 @@ export const isValidProgram = (dateString) => {
   if (date.getTime() < Date.now()) {
     return false;
   }
-  hasProgramWithSameDate = festival.listOfPrograms.some((program) => {date.getTime() === program.date.getTime();
+  const hasProgramWithSameDate = festival.listOfPrograms.some((program) => {date.getTime() === program.date.getTime();
   });
 
   if (hasProgramWithSameDate) {
@@ -116,9 +115,8 @@ export const createProgram = (dateString) => {
   return new Program(date);
 }
 
-export const addProgram = (program) => {
-  return festival.listOfPrograms.push(program) - 1;
-}
+export const addProgram = program => festival.listOfPrograms.push(program) - 1;
+
 
 
 export const addMovieToProgram = (movieIndex, programIndex) => {
@@ -130,8 +128,8 @@ export const addMovieToProgram = (movieIndex, programIndex) => {
   program.addMovie(movie);
 
   return {
-    program: program,
-    oldProgramData: oldProgramData
+    program,
+    oldProgramData
   };
 }
 
