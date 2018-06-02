@@ -1,0 +1,36 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title{
+    background-color: tomato;
+    color:white;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post{
+    background-color: slategray;
+    text-align: left;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 15px;
+    
+}
+.postTitle{
+    padding-bottom: 2px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    margin-top: 0px;
+}
+.postText{
+    padding-top: 0px;
+    margin-top: 2px;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
