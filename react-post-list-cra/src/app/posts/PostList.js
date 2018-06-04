@@ -1,13 +1,14 @@
 import React from 'react';
-import PostItem from './PostItem'
+import { PostItem } from './PostItem'
 
 const PostList = (props) => {
-    const posts = props.myPosts
+    const postList = props.myPosts
+    
     return (
         <div className="container">
             <div className="row">
-                {posts.map((id, post) => {
-                    return (<PostItem key={id} myPosts={post} />)
+                {postList.map((post, id) => {
+                    return (<PostItem key={post.id} post={post} />)
 
                 })}
             </div>
