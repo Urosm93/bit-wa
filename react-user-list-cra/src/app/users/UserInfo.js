@@ -5,6 +5,7 @@ const UserInfo = (props) => {
     if (!props.myUser){
        return null;
     }
+    console.log(props.myUser)
 
     const { name, email, dob, picture } = props.myUser;
     return (
@@ -20,7 +21,6 @@ const UserInfo = (props) => {
                             <p><b>Email:</b>{email}</p>
                             <p><b>Date:</b>{dob}</p>
                         </div>
-
                     </div>
                 </div>
             </div>
