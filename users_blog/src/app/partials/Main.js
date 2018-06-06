@@ -2,8 +2,8 @@ import React from 'react'
 import { UserList } from '../users/UserList';
 
 export const Main = (props) => {
-    const {state} = props
+    const {state, users} = props
     return (
-        <UserList  listView={state}/>
+        <UserList  listView={state} users={users}/>
     )
 }
