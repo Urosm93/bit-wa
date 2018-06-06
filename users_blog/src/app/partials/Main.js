@@ -1,8 +1,9 @@
 import React from 'react'
 import { UserList } from '../users/UserList';
 
-export const Main = () => {
+export const Main = (props) => {
+    const {state} = props
     return (
-        <UserList />
+        <UserList  listView={state}/>
     )
 }

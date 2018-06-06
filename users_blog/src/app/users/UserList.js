@@ -12,6 +12,7 @@ export class UserList extends React.Component {
         };
     }
 
+
     loadUsers() {
         getUsers()
             .then((users) => {
@@ -22,6 +23,7 @@ export class UserList extends React.Component {
     }
 
     renderListItems(users) {
+
         return (
             <div className="collection">
                 {users.map((user, index) => {
@@ -32,6 +34,7 @@ export class UserList extends React.Component {
     }
 
     renderCardItems(users) {
+
         return (
             <div className="collection">
                 {users.map((user, index) => {
@@ -45,13 +48,19 @@ export class UserList extends React.Component {
         this.loadUsers()
     }
 
+    chooseLayout(users) {
+        return this.props.listView ?
+            this.renderListItems(users)
+            : this.renderCardItems(users)
+    }
+
+
     render() {
         const { users } = this.state;
         return (
             <div className="container">
                 <div className="row">
-                    {/* {this.renderListItems(users)} */}
-                    {this.renderCardItems(users)}
+                    {this.chooseLayout(users)}
                 </div>
             </div>
         )
