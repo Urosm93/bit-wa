@@ -16,7 +16,7 @@ export class App extends React.Component {
     };
   }
 
-  loadUsers() {
+  loadUsers = () => {
     getUsers()
       .then((users) => {
         this.setState({
@@ -48,8 +48,8 @@ refreshPage = () => {
   render() {
     return (
       <React.Fragment>
-        <Header title='Bit Users' state={this.state.listView} stateSetting={this.stateSetting} />
-        <Main state={this.state.listView} users={this.state.users} loadUsers={this.loadUsers} />
+        <Header title='Bit Users' state={this.state.listView} stateSetting={this.stateSetting} loadUsers={this.loadUsers} />
+        <Main state={this.state.listView} users={this.state.users}  />
         <Footer />
       </React.Fragment>
 
